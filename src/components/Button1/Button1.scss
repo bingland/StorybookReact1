@@ -1,14 +1,42 @@
+@mixin colorSetFilled ($color) {
+  background-color: $color;
+  border: 2px solid $color;
+
+  &:hover {
+    background-color: lighten($color, 5%);
+    cursor: pointer;
+  }
+}
+@mixin colorSetOutline ($color) {
+  background-color: unset;
+  border: 2px solid $color;
+
+  &:hover {
+    background-color: lighten($color, 10%);
+    cursor: pointer;
+  }
+}
+
 .Button1 {
   padding: 7px 8px;
   border-radius: 5px;
-  border: 2px solid rgb(213, 255, 179);
+  @include colorSetFilled(rgb(185, 185, 185));
   margin: 5px;
-  background: none;
   font-weight: bold;
   font-size: 15px;
+  color: rgb(10, 10, 10);
 
-  &:hover {
-    background-color: rgb(250, 250, 250);
-    cursor: pointer;
+  &-green {
+    @include colorSetFilled(rgb(213, 255, 179));
   }
+  &-blue {
+    @include colorSetFilled(rgb(179, 212, 255));
+  }
+  &-outline-green {
+    @include colorSetOutline(rgb(213, 255, 179));
+  }
+  &-outline-blue {
+    @include colorSetOutline(rgb(179, 212, 255));
+  }
+  
 }
