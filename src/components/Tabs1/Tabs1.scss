@@ -1,0 +1,20 @@
+.Tabs1 {
+  border-bottom: 1px solid grey;
+  display: flex;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+
+  .tab-item {
+    padding: 7px 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 10px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+  }
+  .selected {
+    font-weight: bold;
+    border-bottom: 5px solid rgb(0, 0, 0);
+  }
+}
