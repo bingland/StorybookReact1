@@ -4,7 +4,6 @@ import { useState } from 'react'
 const Tabs1 = ({tabs, colorType}) => {
 
   const [selected, setSelected] = useState(0)
-  let tabClass = 'tab-item selected-' + colorType
 
   return (
     <div className="Tabs1">
