@@ -13,12 +13,36 @@ export default {
 // storybook creates 'template' of how args map to renderings
 const Template = args => <Switch1 {...args} />
 
-export const SwitchPrimary = Template.bind({})
-SwitchPrimary.args = {
-  on: true,
+export const DefaultSwitch = Template.bind({})
+DefaultSwitch.args = {
+  isOn: false,
+  colorType: 'black',
+}
+DefaultSwitch.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/ew4XdbdPViYsWSV8BIR5M1/Untitled?node-id=0%3A1'
+  }
+}
+
+export const SuccessSwitch = Template.bind({})
+SuccessSwitch.args = {
+  isOn: true,
   colorType: 'green',
 }
-SwitchPrimary.parameters = {
+SuccessSwitch.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/ew4XdbdPViYsWSV8BIR5M1/Untitled?node-id=0%3A1'
+  }
+}
+
+export const FailSwitch = Template.bind({})
+FailSwitch.args = {
+  isOn: true,
+  colorType: 'red',
+}
+FailSwitch.parameters = {
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/ew4XdbdPViYsWSV8BIR5M1/Untitled?node-id=0%3A1'

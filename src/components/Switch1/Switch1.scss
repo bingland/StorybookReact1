@@ -1,3 +1,8 @@
+$black: black;
+$blue: rgb(31, 81, 175);
+$green: rgb(31, 175, 62);
+$red: rgb(175, 31, 55);
+
 /* Switch1 - the box around the slider */
 .Switch1 {
   position: relative;
@@ -78,4 +83,25 @@ input:checked + .slider.round {
 
 .slider.round:before {
   border-radius: 25px;
+}
+
+.switch-red > input:checked + .slider:before {
+  background-color: $red;
+}
+.switch-red > input:checked + .slider.round {
+  border: 2px solid $red;
+}
+
+.switch-blue > input:checked + .slider:before {
+  background-color: $blue;
+}
+.switch-blue > input:checked + .slider.round {
+  border: 2px solid $blue;
+}
+
+.switch-green > input:checked + .slider:before {
+  background-color: $green;
+}
+.switch-green > input:checked + .slider.round {
+  border: 2px solid $green;
 }
