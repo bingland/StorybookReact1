@@ -1,3 +1,7 @@
+$black: rgb(0,0,0);
+$blue: rgb(31, 81, 175);
+$green: rgb(31, 175, 62);
+
 .Tabs1 {
   border-bottom: 1px solid rgb(185, 185, 185);
   display: flex;
@@ -15,6 +19,18 @@
   }
   .selected {
     font-weight: bold;
-    border-bottom: 6px solid rgb(0, 0, 0);
+    border-bottom: 6px solid $black;
+  }
+  .selected-black {
+    border-bottom: 6px solid $black;
+    color: $black;
+  }
+  .selected-blue {
+    border-bottom: 6px solid $blue;
+    color: $blue;
+  }
+  .selected-green {
+    border-bottom: 6px solid $green;
+    color: $green;
   }
 }
