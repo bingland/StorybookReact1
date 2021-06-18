@@ -1,10 +1,15 @@
 import './Tabs1.scss'
+import { useState } from 'react'
 
-const Tabs1 = () => {
+const Tabs1 = ({tabs, colorType}) => {
+
+  const [selected, setSelected] = useState(0)
+
   return (
     <div className="Tabs1">
-      <div className="tab-item selected">Tab</div>
-      <div className="tab-item">Tab</div>
+      {tabs.map((tab, index) => (
+        <div className={selected === index ? 'tab-item selected' : 'tab-item'} onClick={() => setSelected(index)}>{tab}</div>
+      ))}
     </div>
   )
 }

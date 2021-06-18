@@ -16,7 +16,6 @@ const Template = args => <Tabs1 {...args} />
 export const LinePrimary = Template.bind({})
 LinePrimary.args = {
   tabs: ['Tab 1', 'Tab 2', 'Tab 3'],
-  selected: 0,
   colorType: 'black'
 }
 LinePrimary.parameters = {
